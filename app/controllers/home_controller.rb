@@ -6,9 +6,11 @@ class HomeController < ApplicationController
 
   def create
     @survey = Survey.new(survey_params)
-
     respond_to do |format|
-      if @survey.save
+      if session[:user_id] == @survey.last - 1
+        @survey.save
+        session[:user_id] = @survey.name
+
         format.html { redirect_to home_path(@survey), notice: 'Survey was successfully created.' }
         format.json { render :show, status: :created, location: @survey }
       else
