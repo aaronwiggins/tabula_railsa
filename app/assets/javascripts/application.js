@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+function disableButton () {
+  var button = document.getElementByClassName("submit");
+    Timeout(button.disable = true, 1 ); {
+  };
+}
