@@ -2,12 +2,12 @@
   <div>
     Name: <%= f.text_field :name %>
   </div>
-  <div>
+  <div class="checkboxes">
     Favorites:<br>
     <%= f.check_box :chocolate %> Chocolate<br>
     <%= f.check_box :rainbow %> Rainbows<br>
     <%= f.check_box :puppies %> Puppies<br>
     <%= f.check_box :cash %> Cold Hard Cash<br>
   </div>
-    <%= f.submit, id="submit" %>
+    <%= f.submit "submit", id: "submit" %>
 <% end %>

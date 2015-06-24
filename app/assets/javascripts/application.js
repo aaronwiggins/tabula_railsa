@@ -14,8 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-function disableButton () {
-  var button = document.getElementByClassName("submit");
-    Timeout(button.disable = true, 1 ); {
-  };
+// function disableButton () {
+//   var button = document.getElementByClassName("submit");
+//     Timeout(button.disable = true, 1 ); {
+//   };
+// }
+function hideBox() {
+  $('.checkboxes').hide();
 }
+
+$(hideBox);
+($('#survey_name') !== ("")) ? $(.checkboxes).show(), : $(hideBox);
